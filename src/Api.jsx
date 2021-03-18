@@ -4,20 +4,6 @@ const BASE_URL = "https://acnhapi.com/v1a";
 
 class AcnhApi {
 
-  // static async request(endpoint, params = {}, method = 'get') {
-  //   console.debug('API Call:', endpoint, params, method);
-
-  //   const url = `${BASE_URL}/${endpoint}`
-
-  //   try {
-  //     return (await axios({ url, method, params })).data;
-  //   } catch (err) {
-  //     console.error('API Error:', err.response);
-  //     let message = err.response.data.error.message;
-  //     throw Array.isArray(message) ? message : [message];
-  //   }
-  // }
-
   static async getVillager(search) {
 
     const response = await axios.get(`https://acnhapi.com/v1a/villagers/`);
@@ -39,13 +25,10 @@ class AcnhApi {
             "icon" : villagers[villager]["icon_uri"],
             "species" : villagers[villager]["species"],
             "image" : villagers[villager]["image_uri"]
-          }
+          };
 
           list[vilName] = data;
-        }
-        // if(vilName.localeCompare(search, undefined, { sensitivity: "accent"}) === 0){
-        //     return villagers[villager];
-        // };
+        };
       };
     };
 
