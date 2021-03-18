@@ -1,0 +1,10 @@
+/* Add CSS styles here! */
+body {
+  font-family: sans-serif;
+}
+
+@font-face{
+  font-family: Mack-SemiboldItalic;
+  src: url('fonts/MackTrial-SemiboldItalic.otf');
+  display: block;
+}
